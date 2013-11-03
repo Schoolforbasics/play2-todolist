@@ -14,9 +14,7 @@ val taskForm = Form(
   	"label" -> nonEmptyText
   )
  
-  def index = Action {
-    Ok("Hello world")
-  }
+  def index = tasks
   
   def tasks = Action {
     Ok(views.html.index(Task.all(), taskForm))
